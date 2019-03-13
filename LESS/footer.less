@@ -12,13 +12,16 @@ footer {
     @media @mobile {
       margin-bottom: 10px;
     }
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-    margin: 10px;
-    color: white;
+    .footer-link {
+      color: black;
+      text-decoration: none;
+      margin: 10px;
+      color: white;
+      &:hover {
+        color: white;
+        text-decoration: underline;
+      }
+    }
   }
 
   .copyright {
