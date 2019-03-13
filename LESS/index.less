@@ -1,0 +1,61 @@
+@import "navbar.less";
+@import "footer.less";
+@import "mixins.less";
+// Escaping
+@mobile: (max-width: 500px);
+@tablet: (min-width: 501px);
+
+html {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #e9eeef;
+  margin: 0;
+  background-image: url("../assets/workout.svg");
+  background-size: cover;
+}
+.container {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-section {
+  height: 80vh;
+  .top-content {
+    text-align: center;
+    padding: 20px;
+    margin: 40px 0;
+    color: #1e232d;
+    @media @mobile {
+      margin: 0;
+    }
+  }
+  .cta-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 200px;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      background: #6c63ff24;
+      .signUp {
+        button {
+          .signUpButton();
+        }
+      }
+      .signIn {
+        button {
+          .logInButton();
+        }
+      }
+    }
+  }
+}
